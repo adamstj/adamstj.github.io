@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+		
     <title>adamstj web-GIS</title>
+	
+	
+	<link href="cover.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Adams Web-GIS Applications</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Upload data</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">adamstj@GitHub</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <!--<a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>-->
       </nav>
-	<div>
-	<p>Hi, this is my (adamstj @ GitHub) ongoing sideprojects of Web-GIS applications.
-	</p>
-	<a href="leaflet_app/index.html">My Leaflet app</a>
-	<br>
-	<a href="openlayers_app/build/index.html">My OpenLayers app</a>
-	</div>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <h1>Adams Web-GIS Applications</h1>
+    <p class="lead">Hi, this is my ongoing sideprojects of Web-GIS applications. The leaflet app is built using vanilla JavaScript and Bootstrap. The OpenLayers app is built using React with WMS being created using Geoserver and PostGIS (PostgreSQL).</p>
+	<!--<p class="lead">The leaflet app is built using vanilla JavaScript and Bootstrap.</p>
+	<p class="lead">The OpenLayers app is built using React with WMS being created using Geoserver and PostGIS (PostgreSQL).</p>-->
+    <p class="lead">
+      <a href="leaflet_app/index.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Leaflet App</a>
+	  <a href="openlayers_app/build/index.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">OpenLayers App</a>
+    </p>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+  </footer>
+</div>
 </body>
 
 </html>
