@@ -12,32 +12,45 @@
     <link rel="stylesheet" href="./lib/MarkerCluster.Default.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     <link rel="stylesheet" href="./dist/style.css">
-    <title>Leaflet Geoproject</title>
+    <title>Leaflet App</title>
 </head>
 
 <body>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Adams Web-GIS Application</a>
+          <a class="navbar-brand" href="#">Leaflet Application</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#" onclick="showAbout()">About</a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link" href="#">Upload data</a>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>
       </nav>
-
+		<div id="popup_container">
+			<div id="prompt-delete">
+				<h2>Leaflet Application</h2>
+				<p>This application have been built using:</p>
+				<ul>
+				<li>Bootstrap</li>
+				<li>Leaflet</li>
+				<li>PostGIS (PostGRESQL)</li>
+				<li>pgrouting</li>
+				<li>Osmosis</li>
+				</ul>
+				<p>For the creation of Isochrones (drive-time polygons) an instance of pgrouting was created on top of PostGIS. The routing network is based on OSM (Open Street Map) which was fetched for entire Sweden from <a href="https://download.geofabrik.de/europe/sweden.html" style="color:white">Geofabrik</a>. The road network was then processed using <a href="https://wiki.openstreetmap.org/wiki/Osmosis" style="color:white">Osmosis software</a>.</p>
+				<button onclick="closeAbout()">Close</button>
+			</div>
+		</div>
     <div id="map">
-
         <!-- Map map-coordinate -->
         <div class="leaflet-control map-coordinate">
             <div class="coordinate"></div>
@@ -57,6 +70,7 @@
               </svg>
         </div>
     </div>
+	
 </body>
 
 </html>
@@ -68,5 +82,7 @@
 <script src="./lib/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 <script src="./data/Stores_dd.js"></script>
+<script src="./data/Isochrones_5_m_dd.js"></script>
+<script src="./data/Isochrones_10_m_dd.js"></script>
 <script src="./dist/main.js"></script>
 <script src="./dist/web-GIS.js"></script>
